@@ -1,0 +1,267 @@
+#include <stdio.h>
+
+int main() {
+    float m1, m2, m3, m4, m5, total, percentage;
+
+    printf("Enter marks of 5 subjects: ");
+    scanf("%f %f %f %f %f", &m1, &m2, &m3, &m4, &m5);
+
+    total = m1 + m2 + m3 + m4 + m5;
+    percentage = total / 5;
+
+    printf("Percentage = %.2f\n", percentage);
+
+    if (percentage >= 90)
+        printf("Grade = A");
+    else if (percentage >= 80)
+        printf("Grade = B");
+    else if (percentage >= 60)
+        printf("Grade = C");
+    else
+        printf("Grade = D");
+
+    return 0;
+}
+How it works
+Adds marks of 5 subjects
+Calculates percentage = total / 5
+Uses if-else to assign grade:
+90–100 → A
+80–89 → B
+60–79 → C
+Below 60 → D
+Example
+
+Input:
+
+85 90 80 70 75
+
+Output:
+
+Percentage = 80.00
+Grade = B
+
+If you want, I can also 
+make an even shorter version for exams (without extra variables).
+
+Write a program to print the sum of all numbers up to a given number.
+
+Here is a short and concise C program to print the sum of all numbers up to a given number:
+
+#include <stdio.h>
+
+int main() {
+    int n, i, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}
+How it works
+Takes a number n from the user
+Loop runs from 1 to n
+Adds each number to sum
+Prints the final sum
+Example
+
+Input:
+
+5
+
+Calculation:
+
+1
++
+2
++
+3
++
+4
++
+5
+=
+15
+1+2+3+4+5=15
+
+Output:
+
+Sum = 15
+
+If you want, I can also show the shortcut formula method:
+
+sum
+=
+𝑛
+(
+𝑛
++
+1
+)
+2
+sum=
+2
+n(n+1)
+	​
+
+
+which is even shorter.
+
+Write a program to find the factorial of a given number.
+
+Here is a short and concise C program to find the factorial of a given number:
+
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        fact = fact * i;
+    }
+
+    printf("Factorial = %lld", fact);
+
+    return 0;
+}
+How it works
+Takes a number n from the user
+Starts fact = 1
+Multiplies all numbers from 1 to n
+Prints the factorial
+Example
+
+Input:
+
+5
+
+Calculation:
+
+5
+!
+=
+1
+×
+2
+×
+3
+×
+4
+×
+5
+=
+120
+5!=1×2×3×4×5=120
+
+Output:
+
+Factorial = 120
+
+If you want, I can also provide a 
+while loop version for practice.
+
+write this program to print fibobacci series.
+
+Here is a short and concise C program to print the Fibonacci series:
+
+#include <stdio.h>
+
+int main() {
+    int n, a = 0, b = 1, c, i;
+
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: ");
+
+    for (i = 1; i <= n; i++) {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    return 0;
+}
+How it works
+Starts with 0 and 1
+Each next term is the sum of previous two terms
+Repeats for n terms
+Example
+
+Input:
+
+6
+
+Output:
+
+Fibonacci Series: 0 1 1 2 3 5
+
+Sequence:
+
+0
+,
+ 
+1
+,
+ 
+1
+,
+ 
+2
+,
+ 
+3
+,
+ 
+5
+,
+ 
+8
+,
+…
+0, 1, 1, 2, 3, 5, 8,…
+
+If you want, I can also 
+explain this line by line for exam writing.
+
+write a program to check whether the entered number is prime or not.
+
+Here is a short and concise C program to check whether a number is prime or not:
+
+#include <stdio.h>
+
+int main() {
+    int n, i, flag = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n <= 1)
+        flag = 0;
+    else {
+        for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+                flag = 0;
+                break;
+            }
+        }
+    }
+
+    if (flag == 1)
+        printf("%d is a Prime Number", n);
+    else
+        printf("%d is not a Prime Number", n);
+
+    return 0;
+}
